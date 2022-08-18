@@ -1,4 +1,4 @@
-// generator functions - 
+
 
 function randomLowerCase() {
     return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
@@ -12,4 +12,18 @@ function randomNumber() {
     return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
 }
 
-console.log(getRandomLow());
+function randomSymbol() {
+    const symbols = '!@#$%^&*(){}[]-=<>,./'
+    return symbols [Math.floor(math.random()*symbols.length)]; 
+}
+
+
+const randomFunc = {
+    nocase: randomLowerCase,
+    case: randomUppperCase,
+    Number: randomNumber,
+    Symbol: randomSymbol
+};
+
+generateBtn.addEventListener("click", writePassword);
+    const length = +8-128;
