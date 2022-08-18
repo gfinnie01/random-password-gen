@@ -1,5 +1,19 @@
 
 
+
+// generateBtn.addEventListener("click", () =>{
+//     const length = +lengthBtn.value;
+//     const hasNoCase = lowercaseBtn.true;
+//     const hasUpperCase = uppercaseBtn.true;
+//     const hasNumber = numbersBtn.true;
+//     const hasSymbol = symbolsBtn.true;
+
+//     console.log(hasNoCase, hasNumber, hasSymbol, hasUpperCase);
+// });
+
+
+
+
 function randomLowerCase() {
     return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
 }
@@ -17,13 +31,9 @@ function randomSymbol() {
     return symbols [Math.floor(math.random()*symbols.length)]; 
 }
 
+// var symbols = "!@#$%^&*()_+,.<>/?";
+// Math.floor(Math.random() * symbols.length);
 
-const randomFunc = {
-    nocase: randomLowerCase,
-    case: randomUppperCase,
-    Number: randomNumber,
-    Symbol: randomSymbol
-};
 
-generateBtn.addEventListener("click", writePassword);
-    const length = +8-128;
+
+
