@@ -1,39 +1,48 @@
 
+var generateBtn = document.querySelector("#generate");
+
+function generatePassword() {
+  var lower = 'abcdefghijklmnopqrstuvwxyz';
+  var upper = 'ABCDEFGHIJKLKLMNOPQRSTUVWXYZ';
+  var symbols = '!@#$%^&*()_+-=,./<>?';
+  var numbers = '1234567890';
+  var possible = '';
 
 
-// generateBtn.addEventListener("click", () =>{
-//     const length = +lengthBtn.value;
-//     const hasNoCase = lowercaseBtn.true;
-//     const hasUpperCase = uppercaseBtn.true;
-//     const hasNumber = numbersBtn.true;
-//     const hasSymbol = symbolsBtn.true;
+  var hasLower = confirm('has lowercase letter?');
 
-//     console.log(hasNoCase, hasNumber, hasSymbol, hasUpperCase);
-// });
+  if (hasLower) {
+    possible += lower;
+  }
+  var hasUpper = confirm('has Uppercase letter?');
+
+  if (hasUpper) {
+    possible += upper;
+  } var hasSymbols = confirm('has symbols?');
+
+  if (hasSymbols) {
+    possible += symbols;
+  }
 
 
+  debugger;
 
-
-function randomLowerCase() {
-    return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+  return '';
 }
 
-function randomUppperCase() {
-    return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+
+
+// Write password to the #password input
+function writePassword() {
+  var password = generatePassword("#password");
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
+
 }
 
-function randomNumber() {
-    return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
-}
-
-function randomSymbol() {
-    const symbols = '!@#$%^&*(){}[]-=<>,./'
-    return symbols [Math.floor(math.random()*symbols.length)]; 
-}
-
-// var symbols = "!@#$%^&*()_+,.<>/?";
-// Math.floor(Math.random() * symbols.length);
-
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
 
 
 
