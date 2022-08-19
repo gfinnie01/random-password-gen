@@ -4,9 +4,12 @@ var generateBtn = document.querySelector("#generate");
 function generatePassword() {
   var lower = 'abcdefghijklmnopqrstuvwxyz';
   var upper = 'ABCDEFGHIJKLKLMNOPQRSTUVWXYZ';
-  var symbols = '!@#$%^&*()_+-=,./<>?';
+  var symbols = '@#$%^&*()_+-=,./<>?';
   var numbers = '1234567890';
-  var possible = '20';
+  var password ='';
+  var possible = '';
+
+  var characters = 12;
 
   var hasLower = confirm('do you want lowercase letters?');
 
@@ -26,7 +29,15 @@ function generatePassword() {
   var hasNumbers = confirm('do you want Numbers?');
 
   if (hasNumbers) {
-    possible += Numbers;
+    possible += numbers;
+  }
+
+  for (var i = 0; i < characters; i++) {
+
+    var random = Math.floor(Math.round() * possible.length);
+
+    console.log(random);
+    password =+ possible[random];
   }
 
   debugger;
